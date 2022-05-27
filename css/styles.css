@@ -150,6 +150,18 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.current::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  border-radius: 2px;
+  background-color: var(--accant-color);
+}
+
 .nav-list .link:hover.link::after {
   background-color: var(--accant-color);
 }
@@ -175,7 +187,6 @@ img {
     ),
     url("../images/hero-bg.jpg");
   background-position: center top;
-  background-size: contain;
   background-repeat: no-repeat;
 
   width: 1600px;
