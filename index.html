@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>goit-markup-hw-04</title>
+    <title>goit-markup-hw-05</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&family=Tangerine:wght@700&display=swap"
       rel="stylesheet"
@@ -61,7 +61,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="button">Заказать услугу</button>
+          <button type="button" class="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
 
@@ -161,25 +161,25 @@
                       <svg width="20" height="20">
                         <use href="./images/sprite.svg#icon-instagram" />
                       </svg> </a
-                  ></il>
+                  ></li>
                   <li class="social-item"
                     ><a class="sicial-link" href="" aria-label="twitter">
                       <svg width="20" height="20">
                         <use href="./images/sprite.svg#icon-twitter" />
                       </svg> </a
-                  ></il>
+                  ></li>
                   <li class="social-item"
                     ><a class="sicial-link" href="" aria-label="facebook">
                       <svg width="20" height="20">
                         <use href="./images/sprite.svg#icon-facebook" />
                       </svg> </a
-                  ></il>
+                  ></li>
                   <li class="social-item"
                     ><a class="sicial-link" href="" aria-label="linkedin">
                       <svg width="20" height="20">
                         <use href="./images/sprite.svg#icon-linkedin" />
                       </svg> </a
-                  ></il>
+                  ></li>
                 </ul>
               </div>
             </li>
@@ -200,25 +200,25 @@
                       <svg width="20" height="20">
                         <use href="./images/sprite.svg#icon-instagram" />
                       </svg> </a
-                  ></il>
+                  ></li>
                   <li class="social-item"
                     ><a class="sicial-link" href="" aria-label="twitter">
                       <svg width="20" height="20">
                         <use href="./images/sprite.svg#icon-twitter" />
                       </svg> </a
-                  ></il>
+                  ></li>
                   <li class="social-item"
                     ><a class="sicial-link" href="" aria-label="facebook">
                       <svg width="20" height="20">
                         <use href="./images/sprite.svg#icon-facebook" />
                       </svg> </a
-                  ></il>
+                  ></li>
                   <li class="social-item"
                     ><a class="sicial-link" href="" aria-label="linkedin">
                       <svg width="20" height="20">
                         <use href="./images/sprite.svg#icon-linkedin" />
                       </svg> </a
-                  ></il>
+                  ></li>
                 </ul>
               </div>
             </li>
@@ -239,25 +239,25 @@
                       <svg width="20" height="20">
                         <use href="./images/sprite.svg#icon-instagram" />
                       </svg> </a
-                  ></il>
+                  ></li>
                   <li class="social-item"
                     ><a class="sicial-link" href="" aria-label="twitter">
                       <svg width="20" height="20">
                         <use href="./images/sprite.svg#icon-twitter" />
                       </svg> </a
-                  ></il>
+                  ></li>
                   <li class="social-item"
                     ><a class="sicial-link" href="" aria-label="facebook">
                       <svg width="20" height="20">
                         <use href="./images/sprite.svg#icon-facebook" />
                       </svg> </a
-                  ></il>
+                  ></li>
                   <li class="social-item"
                     ><a class="sicial-link" href="" aria-label="linkedin">
                       <svg width="20" height="20">
                         <use href="./images/sprite.svg#icon-linkedin" />
                       </svg> </a
-                  ></il>
+                  ></li>
                 </ul>
               </div>
             </li>
@@ -278,25 +278,25 @@
                       <svg width="20" height="20">
                         <use href="./images/sprite.svg#icon-instagram" />
                       </svg> </a
-                  ></il>
+                  ></li>
                   <li class="social-item"
                     ><a class="sicial-link" href="" aria-label="twitter">
                       <svg width="20" height="20">
                         <use href="./images/sprite.svg#icon-twitter" />
                       </svg> </a
-                  ></il>
+                  ></li>
                   <li class="social-item"
                     ><a class="sicial-link" href="" aria-label="facebook">
                       <svg width="20" height="20">
                         <use href="./images/sprite.svg#icon-facebook" />
                       </svg> </a
-                  ></il>
+                  ></li>
                   <li class="social-item"
                     ><a class="sicial-link" href="" aria-label="linkedin">
                       <svg width="20" height="20">
                         <use href="./images/sprite.svg#icon-linkedin" />
                       </svg> </a
-                  ></il>
+                  ></li>
                 </ul>
               </div>
             </li>
@@ -391,13 +391,13 @@
                 <svg width="20" height="20">
                   <use href="./images/sprite.svg#icon-instagram" />
                 </svg> </a
-            ></il>
+            ></li>
             <li class="social-item"
               ><a class="sicial-link" href="" aria-label="twitter">
                 <svg width="20" height="20">
                   <use href="./images/sprite.svg#icon-twitter" />
                 </svg> </a
-            ></il>
+            ></li>
             <li class="social-item"
               ><a class="sicial-link" href="" aria-label="facebook">
                 <svg width="20" height="20">
@@ -415,8 +415,16 @@
       </div>
     </footer>
 
-    <!-- <section class="section-molel">
-      <div class="model-box"></div>
-    </section> -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="model">
+        <button class="button-close" data-modal-close>
+           <svg width="11" height="11">
+            <use href="./images/sprite.svg#icon-close">
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
