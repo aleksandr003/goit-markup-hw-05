@@ -5,9 +5,11 @@
   --accant-color: #2196f3;
   --portfolio-btn-color: #f5f4fa;
   --social-icon-color: #afb1b8;
+  --slider-text-color: rgba(33, 150, 243, 0.9);
 }
 
 body {
+  position: relative;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   line-height: 1.714;
@@ -40,7 +42,12 @@ img {
 }
 .link {
   text-decoration: none;
+
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -92,6 +99,10 @@ img {
 .contacts-list .icon-pag {
   margin-right: 10px;
   fill: var(--primary-text-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-list .link:hover .icon-pag,
@@ -117,6 +128,29 @@ img {
   letter-spacing: 0.02em;
 
   color: var(--title-text-color);
+}
+
+.nav-list .link {
+  position: relative;
+}
+
+.nav-list .link::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  border-radius: 2px;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-list .link:hover.link::after {
+  background-color: var(--accant-color);
 }
 
 .contacts-list .link {
@@ -180,6 +214,10 @@ img {
   color: var(--primary-white-color);
   background-color: var(--accant-color);
   border-radius: 4px;
+
+  transition-property: background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero .button:hover {
@@ -284,6 +322,25 @@ img {
   margin-right: 30px;
 }
 
+.work-list .flex-element {
+  position: relative;
+}
+
+.work-list .title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 27px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.142;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
 /* team */
 
 .team-list {
@@ -348,10 +405,18 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sicial-link svg {
   fill: var(--social-icon-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-sicials .sicial-link:hover {
@@ -377,10 +442,18 @@ img {
   align-items: center;
   border: 1px solid var(--social-icon-color);
   border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link svg {
   fill: var(--social-icon-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list .clients-link:hover svg,
@@ -490,6 +563,10 @@ img {
 
   color: var(--title-text-color);
   background-color: var(--portfolio-btn-color);
+
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-button:hover,
@@ -511,6 +588,10 @@ img {
   margin-right: 30px;
   margin-bottom: 30px;
   overflow: hidden;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-page .flex-element:nth-child(3n) {
@@ -550,4 +631,58 @@ img {
 
 .portfolio-page .text {
   color: var(--primary-text-color);
+}
+
+.slider-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-page .slider-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+
+  margin: 0;
+  padding: 63px 24px 0 24px;
+
+  font-size: 18px;
+  line-height: 1.555;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-white-color);
+  background-color: var(--slider-text-color);
+
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-page .link:hover .slider-text {
+  transform: translateY(0);
+}
+
+.section-molel {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.model-box {
+  width: 300px;
+  height: 250px;
+
+  background-color: white;
 }
